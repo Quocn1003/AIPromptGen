@@ -1,7 +1,9 @@
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 
-// https://vite.dev/config/
+// vite.config.js for github pages
 export default defineConfig({
+  base: '/AIPromptGen/', // Thay bằng tên repo trên GitHub
   plugins: [vue()],
 })
+
