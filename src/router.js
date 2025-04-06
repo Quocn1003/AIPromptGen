@@ -22,7 +22,7 @@ const routes = [
 ]
 
 const router = createRouter({
-    history: createWebHashHistory(), // dùng hash mode
+    history: createWebHistory(import.meta.env.BASE_URL), // Sử dụng BASE_URL từ Vite
     routes,
   });
   
