@@ -33,15 +33,28 @@
   padding: 0;
 }
 .navbar .container-fluid {
-  padding: 0.5rem 2rem;
+  padding: 0.5rem 1rem;
 }
 .navbar-brand {
   padding: 0;
 }
 .navbar-brand img {
+  height: 40px;
   transition: transform 0.2s;
 }
 .navbar-brand img:hover {
   transform: scale(1.1);
+}
+@media (max-width: 576px) {
+  .navbar .container-fluid {
+    padding: 0.5rem;
+  }
+  .navbar-brand img {
+    height: 35px;
+  }
+  .navbar-toggler {
+    padding: 0.25rem;
+    font-size: 1rem;
+  }
 }
 </style> 

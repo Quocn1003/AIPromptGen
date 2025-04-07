@@ -1,5 +1,5 @@
 <template>
-  <main class="container py-5">
+  <div class="container-fluid container-fluid-lg py-5">
     <div class="text-center mb-4">
       <p class="text-light">
         <i class="bi bi-info-circle"></i> 
@@ -61,7 +61,7 @@
         </div>
       </div>
     </div>
-  </main>
+  </div>
 </template>
 
 <script setup>
@@ -90,5 +90,9 @@ import PromptModel2 from './PromptModel2.vue'
 }
 .text-primary:hover {
   text-decoration: underline;
+}
+.container-fluid-lg {
+  max-width: 1400px;
+  margin: 0 auto;
 }
 </style> 
