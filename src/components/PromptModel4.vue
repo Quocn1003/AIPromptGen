@@ -1,7 +1,7 @@
 <template>
   <div class="prompt-form">
     <div class="mb-3">
-      <label for="nameInput" class="form-label">Nhập tên của bạn:</label>
+      <label for="nameInput" class="form-label">Bảng tên:</label>
       <input 
         class="form-control bg-dark text-light" 
         id="nameInput" 
@@ -9,29 +9,36 @@
         v-model="name"
         placeholder="Nhập tên(nên dùng tiếng Việt không dấu tránh lỗi font)"
       >
-      <label for="jobInput" class="form-label">Nghề nghiệp:</label>
-      <input 
-        class="form-control bg-dark text-light" 
-        id="jobInput" 
-        rows="4" 
-        v-model="job"
-        placeholder="Nhập nghề nghiệp(nên dùng tiếng Việt không dấu tránh lỗi font)"
-      >
-      <label for="characterInput" class="form-label">Mô tả nhân vật:</label>
+      <label class="form-label">Giới tính:</label>
+      <div class="d-flex gap-3">
+        <div class="form-check">
+          <input 
+            class="form-check-input" 
+            type="radio" 
+            id="maleRadio" 
+            value="boy" 
+            v-model="gender"
+          >
+          <label class="form-check-label" for="maleRadio">Nam</label>
+        </div>
+        <div class="form-check">
+          <input 
+            class="form-check-input" 
+            type="radio" 
+            id="femaleRadio" 
+            value="girl" 
+            v-model="gender"
+          >
+          <label class="form-check-label" for="femaleRadio">Nữ</label>
+        </div>
+      </div>
+      <label for="characterInput" class="form-label">Mô tả trang phục và ngoại hình của nhân vật:</label>
       <textarea 
         class="form-control bg-dark text-light" 
         id="characterInput" 
         rows="4" 
         v-model="character"
         placeholder="Mô tả về quần áo, kiểu tóc, trang sức, đồng hồ,...(có thể dùng tiếng Việt có dấu)"
-      ></textarea>
-      <label for="accessoryInput" class="form-label">Phụ kiện xung quanh</label>
-      <textarea 
-        class="form-control bg-dark text-light" 
-        id="accessoryInput" 
-        rows="4" 
-        v-model="accessories"
-        placeholder="Mô tả các phụ kiện xung quanh(có thể dùng tiếng Việt)"
       ></textarea>
       <button class="btn btn-primary mt-3" @click="generatePrompt">Tạo Prompt</button>
       <div v-if="generatedPrompt" class="mt-3">
@@ -64,9 +71,8 @@ import { ref, onMounted } from 'vue'
 import * as bootstrap from 'bootstrap'
 
 const name = ref('')
-const job = ref('')
+const gender = ref('')
 const character = ref('')
-const accessories = ref('')
 const generatedPrompt = ref('')
 const toastMessage = ref('')
 
@@ -83,7 +89,7 @@ const generatePrompt = () => {
   // Logic tạo prompt dựa trên input và options
   
   generatedPrompt.value = `
-  Create a highly detailed miniature diorama scene in dollhouse style. . Include a full-body toy figurine of the person in the photo, keeping their real face intact and realistic. The figure must be scaled appropriately and fully visible within the environment. The entire room setting should represent the actual working environment of the person's profession — not just a generic living room. For example: if their job involves a clinic, recreate a tiny dental office with dental chair, instruments, and equipment; if they work in media, create a mini TV studio with camera rigs, lights, and microphones. For professions without a fixed workspace (e.g., freelancer, artist), a personalized home studio can be used, but the furniture and items must still strongly reflect the tools and feel of that job. The furniture, machines, accessories, wall decor, flooring, lighting, and even the layout should be custom tailored to match the person's actual profession. The toy figure should wear profession-specific clothing, shoes, and accessories, such as: [${character.value}], with items like [${accessories.value}]. The image should be captured from a top-down, wide-angle view showing the entire dollhouse clearly placed on a real wooden table or floor — making it unmistakably a handcrafted toy model. Include a miniature nameplate on the floor or wall that fits the theme — styled in a way that suits the profession (e.g., a hospital name badge style for medical fields, microphone name tag for media, etc.). The nameplate should read: ${name.value} ${job.value}. Use warm lighting, miniature proportions, and handcrafted textures to emphasize the cozy, playful, and collectible nature of the scene.
+  3D Chibi Drawing. 3D style claw machine viewed from a 45 degree angle, cozy diffused lighting. Use this image to create a minimalist 3D illustration of a cozy scene designed to be hidden inside a rectangular claw machine. The exterior has soft curves, details and galaxy-style elements, with a nameplate that says "[${name.value}]" on top, all rendered in a soft plastic texture in candy pastel colors like pastel yellow, pastel purple, pastel pink and pastel blue, Inside the machine a [${gender.value}] has an outfit [${character.value}] standing and posing, surrounded by many cute little stuffed animals and cute stickers to decorate the eye
   `
 }
 

@@ -18,33 +18,36 @@
             <h5 class="card-title">Cách Sử Dụng</h5>
             <p class="card-text">Làm theo các bước sau để tạo prompt của bạn:</p>
             <ol class="list-group list-group-numbered list-group-flush">
-              <li class="list-group-item bg-dark text-light border-secondary">
+              <li class="list-group-item text-start bg-dark text-light border-secondary">
                 Chọn phong cách bạn muốn sử dụng ở màn hình Home bằng cách ấn vào nút "Tạo Prompt" của phong cách đó.
               </li>
-              <li class="list-group-item bg-dark text-light border-secondary">
+              <li class="list-group-item text-start bg-dark text-light border-secondary">
                 Nhập tên mô hình (Lưu ý: Nên dùng tiếng Việt không dấu để tránh lỗi font chữ) Ví dụ: "Truong Nguyen"
               </li>
-              <li class="list-group-item bg-dark text-light border-secondary">
+              <li class="list-group-item text-start bg-dark text-light border-secondary">
                 Nhập nghề nghiệp của mô hình. (Lưu ý: Nên dùng tiếng Việt không dấu để tránh lỗi font chữ) Ví dụ: "Developer"
               </li>
-              <li class="list-group-item bg-dark text-light border-secondary">
+              <li class="list-group-item text-start bg-dark text-light border-secondary">
                 Mô tả quần áo, kiểu tóc, trang sức, màu da, mà mô hình sẽ mặc. (Dùng tiếng Việt được) Ví dụ: "Quần áo xanh, kiểu tóc trên, trang sức mẫu xanh, mà mô hình sẽ mặc xanh"
               </li>
-              <li class="list-group-item bg-dark text-light border-secondary">
+              <li class="list-group-item text-start bg-dark text-light border-secondary">
                 Mô tả các phụ kiện xung quanh mô hình. (Dùng tiếng Việt được) (Ví dụ: máy tính, bút cảm ứng, ống nghe, v.v.).
               </li>
-              <li class="list-group-item bg-dark text-light border-secondary">
+              <li class="list-group-item text-start bg-dark text-light border-secondary">
                 Nhấn nút "Tạo Prompt" để tạo ra prompt hoàn chỉnh. Kéo xuống và nút "Sao chép Prompt", Prompt sẽ được tự động copy!
               </li>
-              <li class="list-group-item bg-dark text-light border-secondary">
-                Paste Propmt vừa copy vào Chat GPT. Upload hình cùng với prompt rồi tạo ảnh
+              <li class="list-group-item text-start bg-dark text-light border-secondary">
+                Paste Propmt vừa copy vào <a href="https://chatgpt.com">Chat GPT</a>. Upload hình cùng với prompt rồi tạo ảnh
               </li>
-              <li class="list-group-item bg-dark text-light border-secondary">
-                Sau khi Chat GPT tạo ảnh xong, hình sẽ không giống mặt bạn. Bạn có thể vào Remaker để đổi gương mặt giống nhất với hình của bạn
+              <li class="list-group-item text-start bg-dark text-light border-secondary">
+                Sau khi Chat GPT tạo ảnh xong, hình sẽ không giống mặt bạn. Bạn có thể vào <a href="https://remaker.ai/face-swap-free/">Remaker</a> để đổi gương mặt giống nhất với hình của bạn
               </li>
             </ol>
           </div>
         </div>
+
+        <button class="btn btn-primary mt-3">
+          <router-link class="nav-link" to="/">Quay về trang chủ</router-link></button>
       </div>
     </div>
   </div>
